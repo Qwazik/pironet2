@@ -1,0 +1,16 @@
+@import "_settings/_mixins";
+@import "_settings/_config";
+@import "_settings/_reset";
+@import "_bootstrap-grid";
+
+
+html{
+  font-size: 62.5%;  
+}
+
+body{
+  font-size: 1.6rem;
+  font-family: $ff-primary;
+  margin: 0;
+  padding: 0;
+}
