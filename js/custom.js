@@ -26,6 +26,7 @@ $(function(){
   Plugins.slider = function($el){
     var sliders = {
           'carousel':{
+            lazy: true, 
             slidesPerView: 4,
             spaceBetween: 30,
             pagination: {

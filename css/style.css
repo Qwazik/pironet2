@@ -2429,6 +2429,8 @@ body {
 
 .home-slider {
   border-bottom: 1px solid #BAB8B8; }
+  .home-slider__item {
+    background-color: #e31e24; }
 
 .home-action {
   display: block;
@@ -2836,6 +2838,9 @@ body {
 /*-------------------------------------------------*/
 /*  START: plugins */
 /*-------------------------------------------------*/
+img[src="none"] {
+  display: none; }
+
 .offers-carousel {
   overflow-x: hidden; }
   .offers-carousel .swiper-pagination {
