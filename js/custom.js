@@ -30,6 +30,11 @@ $(function(){
             spaceBetween: 30,
             pagination: {
               el: '.swiper-pagination'
+            },
+            breakpoints: {
+              1229:{
+                slidesPerView: 3
+              }
             }
           },
           'home':{
