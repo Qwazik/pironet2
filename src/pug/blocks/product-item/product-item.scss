@@ -1,0 +1,127 @@
+.product-item{
+  box-shadow: 2px 2px 6px 1px rgba(3, 21, 31, 0.15);
+  background-color: #fff;
+  
+  &__name{
+    color: $red;
+    text-transform: uppercase;
+    font-size: 1.6rem;
+    margin-bottom: 1.5rem;
+    font-weight: 500;
+  }
+  &__video{
+    @extend .off-btn;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: $muted-100;
+    color: $red;
+    font-size: 1.2rem;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    transition: all .3s;
+    span{
+      text-decoration: underline;
+    }
+    &:hover{
+      background-color: $muted-100-hover;
+    }
+    .icm{
+      margin-right: 1rem;
+      font-size: 1.4rem;
+    }
+  }
+  &__discount{
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    background-color: $red;
+    color: $white;
+    font-size: 1.2rem;
+    padding: 1rem 1.9rem;
+    padding-right: 1.5rem;
+    &:after{
+      content: '';
+      position: absolute;
+      width: 1.5rem;
+      transform: skew(15deg);
+      margin-left: -.7rem;
+      height: 100%;
+      left: 100%;
+      top: 0;
+      display: block;
+      background-color: $red;
+    }
+  }
+  &__image{
+    position: relative;
+    height: 17.7rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid #F5F5F5;
+    background-image: url('../img/product-item-pattern.png');
+    background-position: top center;
+    background-size: cover;
+ 
+  }
+  &__content{
+    padding: 2.8rem;
+    padding-bottom: 1rem;
+    font-size: 1.4rem;
+  }
+  &__footer{
+    display: flex;
+  }
+  &__offer,&__btn{
+    flex: 1 1 50%;
+  }
+  &__offer{
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    padding: .5rem 2.8rem;
+  }
+  &__price{
+    font-size: 1.6rem;
+    color: $red;
+    font-weight: 500;
+    &-old{
+      color: $muted-200;
+      font-size: 1.2rem;
+      text-decoration: line-through;
+    }
+  }
+  &__btn{
+    background-color: $red;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.4rem;
+    text-decoration: none;
+    transition: .3s background;
+    &:hover{
+      background-color: $red-hover;
+    }
+  }
+}
+
+.product-props{
+  @extend .off-list;
+  display: flex;
+  flex-wrap: wrap;
+  &__title{
+    color: $muted-200;
+  }
+  &__value{
+    color: $muted-300;
+    display: block;
+  }
+  &__item{
+    flex: 0 0 50%;
+    max-width: 50%;
+    margin-bottom: 1rem;
+  }
+}

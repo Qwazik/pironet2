@@ -1,0 +1,179 @@
+@import "_settings/_mixins";
+@import "_settings/_config";
+
+.ta{
+  &-right{
+    text-align: right;
+  }
+}
+
+.columns{
+  &-2{
+    columns: 2;
+  }
+  &-4{
+    columns: 4;
+  }
+}
+
+.content{
+  color: $muted-300;
+  font-size: 1.4rem;
+  .off-list{
+    li{
+      padding-left: 0;
+      position: static;
+    }
+    li:before{
+      display: none;
+    }
+  }
+  p,li{
+    margin: 1rem 0;
+    &:first-child{
+      margin-top: 0;
+    }
+    &:last-child{
+      margin-bottom: 0;
+    }
+  }
+  ol,
+  ul{
+    @extend .off-list;
+    margin: 2rem 0;
+    &:first-child{
+      margin-top: 0;
+    }
+    &:last-child{
+      margin-bottom: 0;
+    }
+    li{
+      position: relative;
+      padding-left: 2rem;
+      &:before{
+        content: '';
+        display: inline-block;
+        width: 0.8rem;
+        height: 0.8rem;
+        background-color: $red;
+        border-radius: 50%;
+        position: absolute;
+        left: 0;
+        top: 0.3em;
+      }
+    }
+  }
+  ol{
+    counter-reset: ol;
+    li{
+      counter-increment: ol;
+    }
+    li:before{
+      content: counter(ol);
+      color: $red;
+      width: auto;
+      height: auto;
+      background-color: transparent;
+      top: 0;
+    }
+  }
+}
+
+.content .ul,
+.ul{
+  &_line{
+    li{
+      padding-left: 1rem;
+    }
+    li:before{
+      height: auto;
+      width: auto;
+      background: transparent;
+      content: '-';
+      top: .1em;
+    }
+  }
+}
+
+.img-responsive{
+  max-width: 100%;
+}
+.bg{
+  &-red{
+    background-color: $red !important;
+  }
+  &-red-dark{
+    background-color: $red-dark !important;
+  }
+  &-muted{
+    background-color: $muted-100 !important;
+  }
+}
+
+.color{
+  &-red{
+    color: $red !important;
+  }
+  &-muted-100{
+    color: $muted-200 !important;
+  }
+  &-muted-200{
+    color: $muted-300 !important;
+  }
+}
+
+.off-link{
+  text-decoration: none;
+  color: inherit;
+  outline:none;
+}
+
+.off-btn{
+  background: none;
+  border:none;
+  outline:none;
+  color: inherit;
+}
+
+.off-list{
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.h{
+  text-transform: uppercase;
+  color: $red;
+  font-weight: 400;
+  margin-bottom: 1rem;
+  &-steps{
+    font-size: 7.4rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    line-height: 1;
+    .icm{
+      font-size: 0.7em;
+      margin-right: 0.8rem;
+    }
+  }
+  &_big{
+    font-size: 3rem;
+  }
+}
+.fz{
+  &-16{
+    font-size: 1.6rem;
+  }
+}
+.fw{
+  &-400{
+    font-weight: 400;
+  }
+  &-700{
+    font-weight: 700;
+  }
+  &-500{
+    font-weight: 500;
+  }
+}

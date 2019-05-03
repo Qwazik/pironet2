@@ -1,0 +1,21 @@
+.note-block{
+  text-align: center;
+  border: 1px solid $red;
+  padding: 2rem;
+}
+
+.action-col{
+  @extend .off-list;
+  border-left: 3px solid $red;
+  padding-left: 1rem;
+  &__item{
+    &:not(:first-child){
+      margin-top: 2rem;
+    }
+  }
+  &__percent{
+    font-size: 4.5rem;
+    display: block;
+    color: $red;
+  }
+}

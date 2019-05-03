@@ -1,0 +1,26 @@
+mixin product-item()
+  .product-item
+    .product-item__image
+      img(data-src="img/product-item.png", alt="Веселый бит" class="swiper-lazy" src="none")
+      .swiper-lazy-preloader
+      button.product-item__video
+        i.icm.icm-icon_video_player
+        span Видео
+      .product-item__discount Скидка 5%
+    .product-item__content
+      .product-item__name Веселый бит
+      ul.product-item__props.product-props
+        li.product-props__item
+          span.product-props__title Заряды
+          span.product-props__value 36 залпов
+        li.product-props__item
+          span.product-props__title Калибр
+          span.product-props__value 1 дюйма
+        li.product-props__item
+          span.product-props__title Время работы
+          span.product-props__value 45 сек.
+    .product-item__footer
+      .product-item__offer
+        .product-item__price 2 803 руб.
+        .product-item__price-old 3 803 руб.
+      a(href="#").product-item__btn КУПИТЬ

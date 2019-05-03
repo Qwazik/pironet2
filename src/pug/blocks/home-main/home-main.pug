@@ -1,0 +1,32 @@
+mixin home-main()
+  main.home-main
+    .container
+      .row.mb-3
+        .col-lg-9.col-md-12
+          .home-slider(data-slider="home" data-need="2").swiper-container
+            .swiper-wrapper
+              .swiper-slide.home-slider__item: img(src="img/home-slider-item.jpg", alt="Повод всегда найдется").img-responsive
+              .swiper-slide.home-slider__item: img(src="img/home-slider-item.jpg", alt="Повод всегда найдется").img-responsive
+              .swiper-slide.home-slider__item: img(src="img/home-slider-item.jpg", alt="Повод всегда найдется").img-responsive
+              .swiper-slide.home-slider__item: img(src="img/home-slider-item.jpg", alt="Повод всегда найдется").img-responsive
+            .swiper-pagination
+        aside.col-lg-3.home-main__actions
+          ul.home-actions
+            li.home-actions__item
+              a(href="").home-action
+                .home-action__image.home-action__image_ballons
+                .home-action__content
+                  p.home-action__title-before Товары для
+                  p.home-action__title ДНЯ <br> РОЖДЕНИЯ
+            li.home-actions__item
+              a(href="").home-action
+                .home-action__image.home-action__image_ring
+                .home-action__content
+                  p.home-action__title-before Товары для
+                  p.home-action__title СВАДЕБНОГО <br> ТОРЖЕСТВА
+            li.home-actions__item
+              a(href="").home-action
+                .home-action__image.home-action__image_box
+                .home-action__content
+                  p.home-action__title-before Товары для
+                  p.home-action__title НОВОГО ГОДА

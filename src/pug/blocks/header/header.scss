@@ -1,0 +1,213 @@
+/*-------------------------------------------------*/
+/*  START: top-panel */
+/*-------------------------------------------------*/
+.top-panel{
+  background-color: $red-dark;
+  color: $white;
+  font-size: 1.4rem;
+  padding: 0.5rem 0;
+  background-image: url('../img/header-pattern.png');
+  background-position: top center;
+  background-size: cover;
+  &__row{
+    align-items: center;
+  }
+  a:not(.custom-link){
+    @extend .off-link;
+  }
+  &__tel{
+    font-size: 1.6rem;
+    margin-left: 5.5rem;
+  }
+  &__ad{
+    text-align: center;
+    text-transform: uppercase;
+  }
+}
+/*-------------------------------------------------*/
+/*  END: top-panel */
+/*-------------------------------------------------*/
+
+/*-------------------------------------------------*/
+/*  START: header-account */
+/*-------------------------------------------------*/
+.top-account{
+  &__link{
+    color: inherit;
+    text-decoration: underline;
+  }
+}
+/*-------------------------------------------------*/
+/*  END: header-account */
+/*-------------------------------------------------*/
+
+/*-------------------------------------------------*/
+/*  START: city-choise */
+/*-------------------------------------------------*/
+.city-choise{
+  @extend .off-btn;
+  line-height: 1;
+  span{
+    text-decoration: underline;
+  }
+  .icm{
+    margin-left: 1rem;
+    font-size: em(8px, 14px);
+  }
+}
+/*-------------------------------------------------*/
+/*  END: city-choise */
+/*-------------------------------------------------*/
+
+/*-------------------------------------------------*/
+/*  START: main-header */
+/*-------------------------------------------------*/
+.main-header{
+  padding: 1.5rem 0;
+  &__row{
+    align-items: center;
+  }
+  &__nav{
+    margin-bottom: 1.7rem;
+  }
+  &__cart{
+    margin-left: auto;
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+
+.header-cart{
+  display: inline-flex;
+  align-items: center;
+  &__content{
+    text-align: right;
+  }
+  &__sum{
+    color: $red;
+    font-size: 1.8rem;
+    font-weight: 500;
+    margin-bottom: 0.2rem;
+  }
+  &__del-info{
+    color: $muted-200;
+    font-size: 1.4rem;
+    font-style: italic;
+  }
+  &__icon{
+    width: 6.1rem;
+    flex: 0 0 6.1rem;
+    height: 6.1rem;
+    background-color: $red;
+    display: block;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 2.7rem;
+    display: flex;
+    text-decoration: none;
+    transition: background .3s;
+    margin-left: 2rem;
+    .icm{
+      transform: translate(-.1rem, .1rem);
+    }
+    &:hover{
+      background-color: $red-hover;
+    }
+  }
+}
+
+.header-nav{
+  @extend .off-list;
+  display: flex;
+  font-size: 1.3rem;
+  &__item{
+    &:not(:first-child){
+      margin-left: 2.8rem;
+    }
+  }
+  &__link{
+    @extend .off-link;
+    text-transform: uppercase;
+    color: $muted-300;
+    padding-top: 0.7rem;
+    position: relative;
+    &:after{
+      left:0;
+      top: 0;
+      content: '';
+      height: 2px;
+      width: 100%;
+      position: absolute;
+      background-color: red;
+      transition: all .3s;
+      transform: translate(0, -.5rem);
+      opacity: 0;
+    }
+    &_active{
+      font-weight: bold;
+    }
+    &:active:after, &_active:after,
+    &:hover:after{
+      transform: translate(0,0);
+      opacity: 1;
+      
+    }
+  }
+}
+
+.header-search{
+  height: 3.1rem;
+  display: flex;
+  &__input{
+    border:1px solid $red;
+    background-color: #fff;
+    flex: 1 1 0;
+    padding: 1rem;
+
+  }
+  &__submit{
+    @extend .off-btn;
+    background-color: $red;
+    color: $white;
+    flex: 0 0 3.1rem;
+    font-size: 1.7rem;
+    transition: background .3s;
+    line-height: 1;
+    &:hover{
+      background-color: $red-hover;
+    }
+  }
+}
+
+@mixin header-md{
+  .header-logo{
+    &__img{
+      width: 6rem;
+    }
+  }
+  .header-cart{
+    &__sum{
+      font-size: 1.6rem;
+    }
+    &__del{
+      &-info{
+        font-size: 1.2rem;
+      }
+    }
+    &__icon{
+      flex: 0 0 4rem;
+      height: 4rem;
+      font-size: 1.8rem;
+      margin-left: 1rem;
+    }
+  }
+  .header-nav{
+    &__item{
+      &:not(:first-child){
+        margin-left: 1.5rem;
+      }
+    }
+  }
+}

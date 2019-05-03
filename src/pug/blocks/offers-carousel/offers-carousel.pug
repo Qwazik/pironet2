@@ -1,0 +1,16 @@
+mixin offers-carousel()
+  .offers-carousel
+    .container(data-tabs)
+      ul.offers-carousel__nav(data-nav data-active="offers-carousel__nav-item_active").mb-3
+        li.offers-carousel__nav-item Новинки
+        li.offers-carousel__nav-item Хиты
+        li.offers-carousel__nav-item Рекомендуем
+      .offers-carouse__main(data-content data-active="offers-carousel__main-item_active")
+        -for(var j=0;j<3;j++)
+          .offers-carousel__main-item
+            .swiper-container(data-slider="carousel")
+              .swiper-wrapper
+                -for(var i=0;i<10;i++)
+                  .swiper-slide
+                    +product-item
+              .swiper-pagination

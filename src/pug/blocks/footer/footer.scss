@@ -1,0 +1,15 @@
+.main-footer{
+  font-size: 1.3rem;
+  padding: 0.7rem 0;
+  background-color: $red;
+  color: $white;
+  background-image: url('../img/footer-pattern.png');
+  background-position: top center;
+  background-size: cover;
+  a{
+    @extend .off-link;
+  }
+  .col:last-child{
+    text-align: right;
+  }
+}
